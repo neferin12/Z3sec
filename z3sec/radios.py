@@ -86,9 +86,9 @@ class GnuRadio(Radio):
 	    i += 1
             try:
                 _disable_print()
-                gnuradio_set_vars(Channel=11)
+                gnuradio_set_vars(host="127.0.0.1", Channel=11)
                 time.sleep(3)
-                gnuradio_set_vars(Channel=11)
+                gnuradio_set_vars(host="127.0.0.1", Channel=11)
                 _enable_print()
             except socket.error as e:
                 _enable_print()
@@ -122,7 +122,7 @@ class GnuRadio(Radio):
         channel : int
             The channel needs to be in the range of 11 - 26.
         """
-        gnuradio_set_vars(Channel=channel)
+        gnuradio_set_vars(host="127.0.0.1", Channel=channel)
     def recv(self, timeout=0.2):
         """Sniff a scapy packet.
 
