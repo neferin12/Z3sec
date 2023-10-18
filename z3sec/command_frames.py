@@ -6,6 +6,7 @@ devices. (The network key must be known).
 
 from scapy.all import *
 from scapy.layers.dot15d4 import *
+from scapy.layers.zigbee import *
 # from z3sec.dot15d4_zigbee_zll import *
 
 def create_base():
